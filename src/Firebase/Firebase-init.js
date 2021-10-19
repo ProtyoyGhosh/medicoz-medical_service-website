@@ -7,8 +7,3 @@ const initializeFirebase = () => {
 
 export default initializeFirebase;
 
-
-
-
-// git link
-//  https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-ProtyoyGhosh.git
