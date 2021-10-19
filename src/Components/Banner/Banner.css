@@ -1,0 +1,23 @@
+* {
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+.banner-container {
+    background-image: url('../../images/background.jpg');
+}
+
+.banner-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-button {
+    border: none;
+    padding: 7px;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
