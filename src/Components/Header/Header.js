@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/UseFirebase';
+import useAuth from '../../Hooks/useAuth';
 import logo from '../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
-    const { user, logOut } = useFirebase();
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">

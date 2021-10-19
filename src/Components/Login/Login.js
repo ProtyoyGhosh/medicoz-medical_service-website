@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/UseFirebase';
+import useAuth from '../../Hooks/useAuth';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 const Login = () => {
-    const { signInUsingGoogle } = useFirebase();
+    const { signInUsingGoogle } = useAuth();
 
     return (
         <div>
