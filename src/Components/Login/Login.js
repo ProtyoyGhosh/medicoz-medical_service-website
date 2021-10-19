@@ -1,12 +1,22 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 const Login = () => {
     const { signInUsingGoogle } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+            })
+    }
 
     return (
         <div>
@@ -34,15 +44,14 @@ const Login = () => {
                     <div className="google-signin">
                         <Form.Group as={Row} className="mb-5">
                             <Col sm={{ span: 10, offset: 2 }}>
-                                <Button type="submit">Login</Button>
-                                <br /> OR
-                                <br />
-                                <Button onClick={signInUsingGoogle}>Sign In with Google</Button>
+                                <Button className='me-2' type="submit">Login</Button>
+                                OR
+                                <Button className='ms-2' onClick={handleGoogleLogin}>Sign In with Google</Button>
                             </Col>
                         </Form.Group>
                     </div>
                 </Form>
-                <p>New here? <span><Link to='/signup'>Please create an account</Link></span></p>
+                <p>Don't have an account? <span><Link to='/signup'>Please create one</Link></span></p>
             </div>
             <Footer></Footer>
         </div>

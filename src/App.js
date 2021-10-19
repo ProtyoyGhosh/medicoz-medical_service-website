@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Banner from './Components/Banner/Banner';
+import Emergency from './Components/Emergency/Emergency';
 import Error from './Components/Error/Error';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='/emergency'>
+              <Emergency></Emergency>
             </Route>
             <Route path='/footer'>
               <Footer></Footer>
