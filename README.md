@@ -4,7 +4,12 @@ This project is Created with REACT js [Click here to see the website](https://gi
 
 ## Here I use
 
-In the project directory, you can run:
+*HTML5
+*CSS3
+*Boostrap
+*REACT Boostrap
+*ReactJS
+*FireBase
 
 ### `npm start`
 
